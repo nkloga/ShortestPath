@@ -16,7 +16,7 @@ public class App implements Serializable {
 
         final String SEPARATOR = ";";
 
-        String csvFile = "/Users/nk/IdeaProjects/Shortpath/src/main/java/algo/distance.csv";
+        String csvFile = "src/main/java/algo/distance.csv";
         FileInputStream fis = new FileInputStream(csvFile);
         BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
         String line = reader.readLine();
@@ -35,7 +35,7 @@ public class App implements Serializable {
         fis.close();
         reader.close();
         logger.info("Starting serialization of a map");
-        String path = "/Users/nk/IdeaProjects/Shortpath/src/main/java/algo/serialized.data";
+        String path = "src/main/java/algo/serialized.data";
         FileOutputStream fos = new FileOutputStream(path);
         ObjectOutputStream out = new ObjectOutputStream(fos);
         out.writeObject(nodesMap);
